@@ -1,3 +1,5 @@
+`this was forked for porting to stm32`
+
 # Freescale 3-axis accelerometer MMA7455 library for Arduino
 > A serious MMA7455 arduino library
 
