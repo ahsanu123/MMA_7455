@@ -42,12 +42,19 @@
  *
  *
  */
+ 
+ /*
+ * porting to work with stm32 SPI HAL 
+ * by: Ahsanu 2023
+ */
 
 
 #ifndef __MMA_7455_H__
 #define __MMA_7455_H__
 
-#if defined(ARDUINO) && ARDUINO >= 100
+// we do need arduino.h and i2c
+
+/* #if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
 #include "Wire.h"
 #include "SPI.h"
@@ -55,7 +62,7 @@
 #elif defined(SPARK)
 #include "application.h"
 
-#endif
+#endif */
 
 /* I2C addresses */
 #define MMA7455_I2C_ADDR1       (0x1D)

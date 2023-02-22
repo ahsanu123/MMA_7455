@@ -688,18 +688,18 @@ uint8_t MMA_7455::readReg(uint8_t reg)
 
 uint8_t MMA_7455::_readRegI2C(uint8_t reg)
 {
-  uint8_t buff = 0;
-  Wire.beginTransmission(this->_i2c_address);
-  Wire.write(reg);
-  Wire.endTransmission();
-  Wire.beginTransmission(this->_i2c_address);
-  Wire.requestFrom(this->_i2c_address, (uint8_t)1);
-  if(Wire.available())
-  {
-    buff = Wire.read();
-  }
-  Wire.endTransmission();
-  return buff;
+  // uint8_t buff = 0;
+  // Wire.beginTransmission(this->_i2c_address);
+  // Wire.write(reg);
+  // Wire.endTransmission();
+  // Wire.beginTransmission(this->_i2c_address);
+  // Wire.requestFrom(this->_i2c_address, (uint8_t)1);
+  // if(Wire.available())
+  // {
+    // buff = Wire.read();
+  // }
+  // Wire.endTransmission();
+  // return buff;
 }
 
 uint8_t MMA_7455::_readRegSPI(uint8_t reg)
@@ -723,11 +723,11 @@ void MMA_7455::writeReg(uint8_t reg, uint8_t val)
 
 void MMA_7455::_writeRegI2C(uint8_t reg, uint8_t val)
 {
-  Wire.beginTransmission(this->_i2c_address);
-  Wire.write(reg);
-  Wire.write(val);
-  Wire.endTransmission();
-  return;
+  // Wire.beginTransmission(this->_i2c_address);
+  // Wire.write(reg);
+  // Wire.write(val);
+  // Wire.endTransmission();
+  // return;
 }
 
 void MMA_7455::_writeRegSPI(uint8_t reg, uint8_t val)
